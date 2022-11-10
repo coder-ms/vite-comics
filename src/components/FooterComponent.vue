@@ -9,16 +9,76 @@ Per oggi diamo priorità alla struttura: quando è tutto bello solido, passiamo 
 Bonus:
 Creare un componente aggiuntivo per gestire la fascia azzurra con le icone.
 -->
+
 <template>
     <footer>
-
+        <div class="footerSec1">
+            <div class="sectionOne">
+                <div>
+                    <ul>
+                        <li>
+                            <h4>{{ footerSectionOne[0].titleSectionOne }}</h4>
+                        </li>
+                        <li v-for="item in footerSectionOne[0].linkSectionOne">{{ item }}</li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <h4>{{ footerSectionOne[1].titleSectionOne }}</h4>
+                        </li>
+                        <li v-for="item in footerSectionOne[1].linkSectionOne">{{ item }}</li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li>
+                            <h4>{{ footerSectionOne[2].titleSectionOne }}</h4>
+                        </li>
+                        <li v-for="item in footerSectionOne[2].linkSectionOne">{{ item }}</li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li>
+                            <h4>{{ footerSectionOne[3].titleSectionOne }}</h4>
+                        </li>
+                        <li v-for="item in footerSectionOne[3].linkSectionOne">{{ item }}</li>
+                    </ul>
+                </div>
+                <div class="imgContainer">
+                    <img src="../assets/img/dc-logo-bg.png" alt="DC bigLogo">
+                </div>
+            </div>
+        </div>
 
     </footer>
 </template>
   
 <script>
+
 export default {
-    name: 'FooterComponent'
+    name: 'FooterComponent',
+    data() {
+        return {
+            footerSectionOne: [
+                {
+                    titleSectionOne: 'dc comics',
+                    linkSectionOne: ['Characters', 'Comics', 'Movies', 'TV', 'Games', 'Videos', 'News']
+                },
+                {
+                    titleSectionOne: 'shop',
+                    linkSectionOne: ['Shop DC', 'Shop DC Collectibles']
+                },
+                {
+                    titleSectionOne: 'dc',
+                    linkSectionOne: ['Terms Of Use', 'Privacy policy (new)', 'Ad Choices', 'Advertising', 'Jobs', 'Subscriptions', 'Talent Workshops', 'CPSC Certificates', 'Ratings', 'Shop Help', 'Contact Us']
+                },
+                {
+                    titleSectionOne: 'sites',
+                    linkSectionOne: ['DC', 'MAD Magazine', 'DC Kids', 'DC Universe', 'DC Power Visa']
+                }
+            ]
+        }
+    }
 }
 </script>
   
@@ -27,39 +87,54 @@ export default {
 @use '../assets/styles/partials/mixins' as *;
 
 footer {
-    text-align: center;
-    margin-bottom: 3rem;
-    display: flex;
-
-    .logo,
-    .footer-links {
-        flex-basis: calc(100% / 3);
-        padding: 0 1rem;
-    }
-
-    h4 {
-        text-transform: uppercase;
-        font-size: 1.25rem;
-        font-weight: 600;
-    }
-
-    ul {
-        list-style-type: none;
-
-        li a {
-            display: inline-block;
-            text-decoration: none;
-            margin-bottom: 0.25rem;
-            font-size: 0.875rem;
-            color: $bluetext;
 
 
-            &:hover {
-                //lighten(, 70%)
-                background: $primary;
+    .footerSec1 {
+        height: 300px;
+        background-image: url('../assets/img/footer-bg.jpg');
+        background-size: cover;
+
+
+        .sectionOne {
+            display: flex;
+            justify-content: space-between;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            width: 80vw;
+            margin: 0 auto;
+
+            ul {
+                list-style: none;
+                color: grey;
+                font-size: 12px;
+                margin-right: 20px;
+
+                h4 {
+                    font-size: 12px;
+                    color: white;
+                    text-transform: uppercase;
+                    margin: 12px 0;
+                }
+
+                li {
+                    padding: 2px 0;
+                }
+            }
+
+            .imgContainer {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+
+                img {
+                    width: 100%;
+                }
             }
         }
     }
+
+
 }
 </style>
 <!--

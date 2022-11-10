@@ -104,28 +104,21 @@ header {
         align-items: center;
 
         img {
-            margin-left: 30px;
-            margin-right: 20%;
             width: 100%;
         }
-
     }
-
-
 
     nav {
         text-align: center;
         display: flex;
         justify-content: flex-start;
-        align-items: center;
 
         ul {
             list-style: none;
-            margin: 2.5rem 1rem 4rem;
+            margin: 2.5rem 1rem;
             @include dflex;
 
             li {
-
                 a {
                     text-transform: uppercase;
                     display: inline-block;
@@ -136,16 +129,13 @@ header {
                     font-size: 0.75rem;
                     transition: background 0.3s;
 
-
                     &.active,
                     &:hover {
                         color: $bluetext;
                         border-bottom: 6px solid $bluetext;
                     }
-
                 }
             }
-
         }
     }
 }
