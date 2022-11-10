@@ -17,8 +17,10 @@ Creare un componente aggiuntivo per gestire la fascia azzurra con le icone.
         <nav>
             <ul>
                 <li v-for="(link, index) in links" :key="index">
-                    <a :href="link.url" :class="{ 'active': link.current }">{{ link.text }}</a>
+                    <a :href="link.url" :class="{ 'active': link.current }">{{ link.text }}
+                    </a>
                 </li>
+                <!--CAPIRE COME METTERE -->
             </ul>
         </nav>
     </header>
@@ -30,7 +32,56 @@ export default {
     data() {
         return {
             links: [
-
+                {
+                    text: "Characters",
+                    url: "#",
+                    current: false,
+                },
+                {
+                    text: "Comics",
+                    url: "#",
+                    current: true,
+                },
+                {
+                    text: "Movies",
+                    url: "#",
+                    current: false,
+                },
+                {
+                    text: "TV",
+                    url: "#",
+                    current: false,
+                },
+                {
+                    text: "Games",
+                    url: "#",
+                    current: false,
+                },
+                {
+                    text: "Collectibles",
+                    url: "#",
+                    current: false,
+                },
+                {
+                    text: "Videos",
+                    url: "#",
+                    current: false,
+                },
+                {
+                    text: "Fans",
+                    url: "#",
+                    current: false,
+                },
+                {
+                    text: "News",
+                    url: "#",
+                    current: false,
+                },
+                {
+                    text: "Shop",
+                    url: "#",
+                    current: false,
+                },
             ]
         }
     }
@@ -43,25 +94,58 @@ export default {
 
 header {
     text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 
-    ul {
-        list-style: none;
-        margin: 2.5rem 1rem 4rem;
-        @include dflex;
+    a {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
 
-        li a {
-            display: inline-block;
-            padding: 1rem;
-            text-decoration: none;
-            font-weight: 600;
-            transition: background 0.3s;
-            color: $blacktest;
+        img {
+            margin-left: 30px;
+            margin-right: 20%;
+            width: 100%;
+        }
 
-            &.active,
-            &:hover {
-                //lighten(, 70%)
-                background: $lightblue;
+    }
+
+
+
+    nav {
+        text-align: center;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        ul {
+            list-style: none;
+            margin: 2.5rem 1rem 4rem;
+            @include dflex;
+
+            li {
+
+                a {
+                    text-transform: uppercase;
+                    display: inline-block;
+                    padding: 3rem 0.75rem;
+                    text-decoration: none;
+                    font-weight: 600;
+                    margin: 0 0.5rem;
+                    font-size: 0.75rem;
+                    transition: background 0.3s;
+
+
+                    &.active,
+                    &:hover {
+                        color: $bluetext;
+                        border-bottom: 6px solid $bluetext;
+                    }
+
+                }
             }
+
         }
     }
 }
