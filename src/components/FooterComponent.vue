@@ -1,41 +1,17 @@
+<!--
+Esercizio di oggi: Vite DC Comics
+nome repo: vite-comics
+Descrizione:
+Create un nuovo progetto utilizzando Vite e Vue 3 e definite i componenti necessari per strutturare il layout come da screenshot allegato.
+Quando la struttura a macroblocchi è pronta, popolate le voci di menu dinamicamente usando i data del componente.
+Per oggi diamo priorità alla struttura: quando è tutto bello solido, passiamo al Sass!
+
+Bonus:
+Creare un componente aggiuntivo per gestire la fascia azzurra con le icone.
+-->
 <template>
     <footer>
-        <div class="col container">
-            <a href="#">
-                <img src="../assets/img/la-molisana-logo.png" alt="La Molisana">
-            </a>
-        </div>
-        <div class="footer-links">
-            <h4>Pastificio</h4>
-            <nav>
-                <!--
-                <ul>
-                    <li v-for="(link, index) in links" :key="index">
-                        <a :href="link.url" :class="{ 'active': link.current }">{{ link.text }}</a>
-                    </li>
-                </ul>
-                -->
-                <ul>
-                    <li><a href="#">Il Pastificio</a></li>
-                    <li><a href="#">Il grano</a></li>
-                    <li><a href="#">Filiera</a></li>
-                    <li><a href="#">100 anni di pasta</a></li>
-                    <li><a href="#">Sartoria della pasta</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="footer-links">
-            <h4>prodotti</h4>
-            <nav>
-                <ul>
-                    <li><a href="#">Le Classiche</a></li>
-                    <li><a href="#">Le Intengrali</a></li>
-                    <li><a href="#">Le Speciali</a></li>
-                    <li><a href="#">Le Biologiche</a></li>
-                    <li><a href="#">Le Gluten-free</a></li>
-                </ul>
-            </nav>
-        </div>
+
 
     </footer>
 </template>
