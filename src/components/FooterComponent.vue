@@ -14,42 +14,61 @@ Creare un componente aggiuntivo per gestire la fascia azzurra con le icone.
     <footer>
         <div class="footerSec1">
             <div class="sectionOne">
-                <div>
-                    <ul>
-                        <li>
-                            <h4>{{ footerSectionOne[0].titleSectionOne }}</h4>
-                        </li>
-                        <li v-for="item in footerSectionOne[0].linkSectionOne">{{ item }}</li>
-                    </ul>
-                    <ul>
-                        <li>
-                            <h4>{{ footerSectionOne[1].titleSectionOne }}</h4>
-                        </li>
-                        <li v-for="item in footerSectionOne[1].linkSectionOne">{{ item }}</li>
-                    </ul>
+                <div class="links">
+                    <div>
+                        <ul>
+                            <li>
+                                <h4>{{ footerSectionOne[0].titleSectionOne }}</h4>
+                            </li>
+                            <li v-for="item in footerSectionOne[0].linkSectionOne">{{ item }}</li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <h4>{{ footerSectionOne[1].titleSectionOne }}</h4>
+                            </li>
+                            <li v-for="item in footerSectionOne[1].linkSectionOne">{{ item }}</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul>
+                            <li>
+                                <h4>{{ footerSectionOne[2].titleSectionOne }}</h4>
+                            </li>
+                            <li v-for="item in footerSectionOne[2].linkSectionOne">{{ item }}</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul>
+                            <li>
+                                <h4>{{ footerSectionOne[3].titleSectionOne }}</h4>
+                            </li>
+                            <li v-for="item in footerSectionOne[3].linkSectionOne">{{ item }}</li>
+                        </ul>
+                    </div>
                 </div>
-                <div>
-                    <ul>
-                        <li>
-                            <h4>{{ footerSectionOne[2].titleSectionOne }}</h4>
-                        </li>
-                        <li v-for="item in footerSectionOne[2].linkSectionOne">{{ item }}</li>
-                    </ul>
-                </div>
-                <div>
-                    <ul>
-                        <li>
-                            <h4>{{ footerSectionOne[3].titleSectionOne }}</h4>
-                        </li>
-                        <li v-for="item in footerSectionOne[3].linkSectionOne">{{ item }}</li>
-                    </ul>
-                </div>
+
                 <div class="imgContainer">
                     <img src="../assets/img/dc-logo-bg.png" alt="DC bigLogo">
                 </div>
             </div>
         </div>
 
+        <div class="footerSec2">
+            <div class="sectionTwo">
+                <div>
+                    <div class="shopBtn">shop now !</div>
+                </div>
+
+                <div class="socials">
+                    <h4>follow us</h4>
+                    <img src="../assets/img/footer-facebook.png" alt="Facebook Icon">
+                    <img src="../assets/img/footer-twitter.png" alt="Twitter Icon">
+                    <img src="../assets/img/footer-youtube.png" alt="YouTube Icon">
+                    <img src="../assets/img/footer-pinterest.png" alt="Pinterest Icon">
+                    <img src="../assets/img/footer-periscope.png" alt="Periscope Icon">
+                </div>
+            </div>
+        </div>
     </footer>
 </template>
   
@@ -104,23 +123,28 @@ footer {
             width: 80vw;
             margin: 0 auto;
 
-            ul {
-                list-style: none;
-                color: grey;
-                font-size: 12px;
-                margin-right: 20px;
+            .links {
+                display: flex;
 
-                h4 {
+                ul {
+                    list-style: none;
+                    color: grey;
                     font-size: 12px;
-                    color: white;
-                    text-transform: uppercase;
-                    margin: 12px 0;
-                }
+                    margin-right: 20px;
 
-                li {
-                    padding: 2px 0;
+                    h4 {
+                        font-size: 12px;
+                        color: white;
+                        text-transform: uppercase;
+                        margin: 12px 0;
+                    }
+
+                    li {
+                        padding: 2px 0;
+                    }
                 }
             }
+
 
             .imgContainer {
                 display: flex;
@@ -129,6 +153,50 @@ footer {
 
                 img {
                     width: 100%;
+                }
+            }
+        }
+    }
+
+    .footerSec2 {
+        height: 80px;
+        width: 100%;
+        background-color: rgb(49, 46, 46);
+
+        .sectionTwo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+            width: 80vw;
+            margin: 0 auto;
+
+            div {
+                .shopBtn {
+                    border: 2px solid $bluetext;
+                    padding: 5px 10px;
+                    text-transform: uppercase;
+                    color: white;
+                    font-size: 12px;
+                }
+            }
+
+
+            .socials {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 40%;
+
+
+                h4 {
+                    color: $bluetext;
+                    text-transform: uppercase;
+                    font-weight: bolder;
+                }
+
+                img {
+                    margin: 0 10px;
                 }
             }
         }
