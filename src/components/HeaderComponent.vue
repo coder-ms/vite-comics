@@ -104,7 +104,7 @@ header {
         align-items: center;
 
         img {
-            width: 100%;
+            width: 80px;
         }
     }
 
@@ -115,7 +115,7 @@ header {
 
         ul {
             list-style: none;
-            margin: 2.5rem 1rem;
+            margin: 1rem;
             @include dflex;
 
             li {
@@ -128,6 +128,7 @@ header {
                     margin: 0 0.5rem;
                     font-size: 0.75rem;
                     transition: background 0.3s;
+                    border-bottom: 6px solid white;
 
                     &.active,
                     &:hover {
