@@ -3,9 +3,8 @@
 
   <main>
     <ProductList />
-    <SectionBrowserComponent />
   </main>
-
+  <SectionBrowserComponent />
   <FooterComponent />
 </template>
 
