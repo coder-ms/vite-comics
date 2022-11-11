@@ -15,7 +15,7 @@ Creare un componente aggiuntivo per gestire la fascia azzurra con le icone.
         <div class="browserContainer">
             <div v-for="(item, index) in browserSection" :key="index" class="browser">
                 <div>
-                    <img :src="item.browserImg" :alt="item.browserName + ' pic'">
+                    <img :src="item.browserImg" alt="">
                 </div>
                 <span>{{ item.browserName }}</span>
             </div>
