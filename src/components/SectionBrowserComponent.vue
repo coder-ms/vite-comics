@@ -62,8 +62,10 @@ export default {
 
 
 section {
-    height: 120px;
+    height: 150px;
     background-color: $bluetext;
+    display: flex;
+    align-items: center;
 
     .browserContainer {
         display: flex;

@@ -56,7 +56,7 @@ Creare un componente aggiuntivo per gestire la fascia azzurra con le icone.
         <div class="footerSec2">
             <div class="sectionTwo">
                 <div>
-                    <div class="shopBtn">shop now !</div>
+                    <div class="shopBtn">sign up now!</div>
                 </div>
 
                 <div class="socials">
@@ -109,7 +109,7 @@ footer {
 
 
     .footerSec1 {
-        height: 300px;
+        height: 340px;
         background-image: url('../assets/img/footer-bg.jpg');
         background-size: cover;
 
@@ -122,6 +122,7 @@ footer {
             overflow: hidden;
             width: 80vw;
             margin: 0 auto;
+            padding-top: 20px;
 
             .links {
                 display: flex;
@@ -133,7 +134,7 @@ footer {
                     margin-right: 20px;
 
                     h4 {
-                        font-size: 12px;
+                        font-size: 16px;
                         color: white;
                         text-transform: uppercase;
                         margin: 12px 0;
@@ -159,7 +160,7 @@ footer {
     }
 
     .footerSec2 {
-        height: 80px;
+        height: 150px;
         width: 100%;
         background-color: rgb(49, 46, 46);
 
@@ -173,11 +174,12 @@ footer {
 
             div {
                 .shopBtn {
-                    border: 2px solid $bluetext;
+                    border: 3px solid $bluetext;
                     padding: 5px 10px;
                     text-transform: uppercase;
                     color: white;
-                    font-size: 12px;
+                    font-size: 16px;
+                    font-weight: 600;
                 }
             }
 
@@ -193,6 +195,7 @@ footer {
                     color: $bluetext;
                     text-transform: uppercase;
                     font-weight: bolder;
+                    margin: 0 10px;
                 }
 
                 img {

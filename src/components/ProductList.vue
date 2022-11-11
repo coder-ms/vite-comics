@@ -27,7 +27,10 @@ export default {
 
 
 section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    margin: 3rem 0;
+    height: 147px;
 }
 </style>
