@@ -1,25 +1,25 @@
 <template>
   <HeaderComponent />
+  <ProductList />
 
-  <main>
-    <ProductList />
-  </main>
-  <SectionBrowserComponent />
+  <MainComponent />
   <FooterComponent />
 </template>
 
 <script>
 
 import HeaderComponent from './components/HeaderComponent.vue';
-import FooterComponent from './components/FooterComponent.vue';
-import SectionBrowserComponent from './components/SectionBrowserComponent.vue';
 import ProductList from './components/ProductList.vue';
+import MainComponent from './components/MainComponent.vue';
+import FooterComponent from './components/FooterComponent.vue';
+
+
 
 export default {
   components: {
     HeaderComponent,
     ProductList,
-    SectionBrowserComponent,
+    MainComponent,
     FooterComponent
   }
 }
@@ -28,4 +28,29 @@ export default {
 <style lang="scss" scoped>
 
 </style>
+
+
+<!--
+<template>
+  <HeaderComponent/>
+  <CurrentSeriesComponent/>
+  <BrowseSectionsComponent/>
+  <FooterComponent/>
+</template>
+
+<script>
+  import HeaderComponent from './components/HeaderComponent.vue';
+  import FooterComponent from './components/FooterComponent.vue';
+  import BrowseSectionsComponent from './components/BrowseSectionsComponent.vue';
+  import CurrentSeriesComponent from './components/CurrentSeriesComponent.vue';
+  export default {
+    components: {
+      HeaderComponent,
+      FooterComponent,
+      BrowseSectionsComponent,
+      CurrentSeriesComponent
+    }
+  }
+</script>
+-->
 

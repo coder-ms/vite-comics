@@ -11,7 +11,6 @@ Creare un componente aggiuntivo per gestire la fascia azzurra con le icone.
 -->
 
 <template>
-    <!--SECTION-->
     <section>
         <div class="browserContainer">
             <div v-for="(item, index) in browserSection" :key="index" class="browser">
